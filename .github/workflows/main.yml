@@ -1,0 +1,15 @@
+name: compile helloworld
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  build-and-deploy:
+    runs-on: centos-latest
+    steps:
+      name: Build
+      run:
+        make
+    
