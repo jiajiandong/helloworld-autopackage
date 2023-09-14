@@ -13,10 +13,13 @@ jobs:
         run:
           cd src/;make -f Makefile
 
+      - name: dabao
+        run: cp src/main . ; tar cvf main.tar main
+
       - name: shangchuan
      #   uses: softprops/action-gh-release@v1
         with:
      #     #publish_dir: ./test
           files: ./main.tar.gz
-        env:
+     #   env:
           github_token: ${{ secrets.token }}
