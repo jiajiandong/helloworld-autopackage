@@ -23,5 +23,5 @@ jobs:
         with:
      #     #publish_dir: ./test
           files: ./main.tar.gz
-     #   env:
+        env:
           github_token: ${{ secrets.token }}
