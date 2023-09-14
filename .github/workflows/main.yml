@@ -14,9 +14,11 @@ jobs:
           cd src/;make -f Makefile
 
       - name: dabao
+      - uses: actions/checkout@v3
         run: cp src/main . ; tar cvf main.tar main
 
       - name: shangchuan
+      - uses: actions/checkout@v3
      #   uses: softprops/action-gh-release@v1
         with:
      #     #publish_dir: ./test
