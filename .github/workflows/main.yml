@@ -8,17 +8,16 @@ jobs:
   build-and-deploy:
     runs-on: centos-latest
     steps:
-      - name: bianyi
       - uses: actions/checkout@v3
+      - name: bianyi
         run:
-          cd src/;make -f Makefile
+          cd src;make -f Makefile
 
       - name: dabao
-      - uses: actions/checkout@v3
         run: cp src/main . ; tar cvf main.tar main
 
       - name: shangchuan
-      - uses: actions/checkout@v3
+      - uses: softprops/action-gh-release@v1
         with:
           files: ./main.tar.gz
         env:
