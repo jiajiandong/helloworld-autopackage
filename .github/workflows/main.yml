@@ -8,7 +8,9 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v3
       - name: bianyi
+        shell: bash
         run:
           make -f Makefile
       - name: shangchuan
