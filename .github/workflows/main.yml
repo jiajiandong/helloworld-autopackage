@@ -14,9 +14,10 @@ jobs:
           make -f Makefile
 
       - name: shangchuan
-        uses: softprops/action-gh-release@v1
+        uses: actions/checkout@v3
         with:
-          github_token: ${{ secrets.token }}
      #     #publish_dir: ./test
           files: ./main.tar.gz
+        env:
+          github_token: ${{ secrets.token }}
 
