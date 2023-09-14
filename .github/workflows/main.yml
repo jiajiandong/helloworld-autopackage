@@ -20,5 +20,4 @@ jobs:
         uses: softprops/action-gh-release@v1
         with:
           files: ./main.tar
-        env:
           github_token: ${{ secrets.token }}
