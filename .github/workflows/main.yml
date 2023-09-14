@@ -6,7 +6,7 @@ on:
 
 jobs:
   build-and-deploy:
-    runs-on: ubuntu-latest
+    runs-on: centos-latest
     steps:
       - name: bianyi
       - uses: actions/checkout@v3
@@ -19,9 +19,7 @@ jobs:
 
       - name: shangchuan
       - uses: actions/checkout@v3
-     #   uses: softprops/action-gh-release@v1
         with:
-     #     #publish_dir: ./test
           files: ./main.tar.gz
         env:
           github_token: ${{ secrets.token }}
