@@ -10,12 +10,11 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: bianyi
-        shell: bash
         run:
           make -f Makefile
       - name: shangchuan
         uses: softprops/action-gh-release@v1
-     #   with:
+        with:
           github_token: ${{ secrets.token }}
      #     #publish_dir: ./test
           files: ./test/main.tar.gz
