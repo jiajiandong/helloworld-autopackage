@@ -8,7 +8,7 @@ jobs:
   build-and-deploy:
     runs-on: centos-latest
     steps:
-      - uses: actions/checkout@v3
+        uses: actions/checkout@v3
       - name: bianyi
         run:
           make -f Makefile
@@ -17,7 +17,7 @@ jobs:
         run: tar cvf main.tar main
 
       - name: shangchuan
-      - uses: softprops/action-gh-release@v1
+        uses: softprops/action-gh-release@v1
         with:
           files: ./main.tar
         env:
