@@ -8,7 +8,8 @@ jobs:
 
     steps:
       - name: bianyi
+        uses: action/checkout@v3
         shell: bash
         run: |
           ls;
-          #          make -f Makefile;
+          make -f Makefile;
