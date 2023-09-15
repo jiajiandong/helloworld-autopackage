@@ -9,4 +9,4 @@ jobs:
     steps:
       - name: bianyi
         shell: bash
-        run: make
+        run: make -f Makefile
