@@ -7,8 +7,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: bianyi
         uses: action/checkout@v3
+      - name: bianyi
         shell: bash
         run: |
           ls;
