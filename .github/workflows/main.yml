@@ -13,11 +13,11 @@ jobs:
       - name: checkout code
         uses: actions/checkout@v4
 
-      - name: bianyi
+      - name: compile source
         run:
           make -f Makefile;
 
-      - name: shangchun
+      - name: release package to repo
         uses: softprops/action-gh-release@v1
         with:
           files: main.tar.gz
