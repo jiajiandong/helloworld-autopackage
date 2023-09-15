@@ -7,9 +7,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: checkout source
-        uses: action/checkout@v3
-
       - name: bianyi
         shell: bash
         run: make
