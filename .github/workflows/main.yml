@@ -10,11 +10,6 @@ jobs:
       - name: checkout source
         uses: action/checkout@v3
 
-      - name: cache files
-        uses: action/cache@v3
-        with:
-          main.tar.gz
-
       - name: bianyi
         shell: bash
         run: make
