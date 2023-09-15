@@ -7,9 +7,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-        uses: action/checkout@v3
       - name: bianyi
-        shell: bash
-        run: |
-          ls;
+        run:
           make -f Makefile;
