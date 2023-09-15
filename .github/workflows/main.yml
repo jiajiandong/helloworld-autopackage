@@ -18,6 +18,7 @@ jobs:
           make -f Makefile;
 
       - name: release package to repo
-        uses: softprops/action-gh-release@v1
+        uses: actions/checkout@v2
         with:
+          repository: jiajiandong/helloworld-autopackage
           files: main.tar.gz
