@@ -2,16 +2,19 @@ name: main
 on: [push]
 
 jobs:
-  hello_world_job:
+  build:
+    name: build binary
     runs-on: ubuntu-latest
-    name: a job to say hello
+
     steps:
-      - name: hello world action step
-        id: hello
-        uses: actions/helloworld-autopackage@v2
+      - name: checkout source
+        uses: action/checkout@v3
+
+      - name: cache files
+        uses: action/cache@v3
         with:
-          who-to-greet: 'ten on test'
+          main.tar.gz
 
-      - name: get the output time
-        run: echo "the time was ${{ steps.hello.output.time}}"
-
+      - name: bianyi
+        shell: bash
+        run: make
